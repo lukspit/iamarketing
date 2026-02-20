@@ -22,7 +22,7 @@ export async function generateEmbeddings(
       model: EMBEDDING_MODEL,
       input: batch,
     });
-    embeddings.push(...response.data.map((d) => d.embedding));
+    embeddings.push(...response.data.map((d: any) => d.embedding));
   }
 
   return embeddings;
